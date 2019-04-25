@@ -1,4 +1,4 @@
-{% set version = '0.9-10' %}
+{% set version = '0.9-11' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,7 +11,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rJava_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rJava/rJava_{{ version }}.tar.gz
-  sha256: c9934bdd3ae08746c4d4b9faa235af2c147a71235a9af108e58bff11c179fe78
+  sha256: c28ae131456a98f4d3498aa8f6eac9d4df48727008dacff1aa561fc883972c69
 
   patches:
     - 0001-Improve-lib-jvm.-so-dylib-dll-loading.patch
@@ -75,6 +75,7 @@ about:
   summary: Low-level interface to Java VM very much like .C/.Call and friends. Allows creation
     of objects, calling methods and accessing fields.
   license_family: GPL2
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
@@ -86,7 +87,7 @@ extra:
 # The original CRAN metadata for this package was:
 
 # Package: rJava
-# Version: 0.9-10
+# Version: 0.9-11
 # Title: Low-Level R to Java Interface
 # Author: Simon Urbanek <simon.urbanek@r-project.org>
 # Maintainer: Simon Urbanek <simon.urbanek@r-project.org>
@@ -97,9 +98,9 @@ extra:
 # SystemRequirements: Java JDK 1.2 or higher (for JRI/REngine JDK 1.4 or higher), GNU make
 # BugReports: https://github.com/s-u/rJava/issues
 # NeedsCompilation: yes
-# Packaged: 2018-05-14 20:48:38 UTC; svnuser
+# Packaged: 2019-03-27 20:56:52 UTC; svnuser
 # Repository: CRAN
-# Date/Publication: 2018-05-29 10:16:27 UTC
+# Date/Publication: 2019-03-29 06:53:31 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
