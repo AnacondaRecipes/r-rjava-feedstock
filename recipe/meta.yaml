@@ -14,7 +14,7 @@ source:
   sha256: c28ae131456a98f4d3498aa8f6eac9d4df48727008dacff1aa561fc883972c69
 
   patches:
-    - 0001-Improve-lib-jvm.-so-dylib-dll-loading.patch
+    # - 0001-Improve-lib-jvm.-so-dylib-dll-loading.patch
 
 build:
   merge_build_host: True  # [win]
@@ -27,6 +27,7 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+    - jre/lib/amd64/server/
   script_env:
     - JAVA_HOME
 
