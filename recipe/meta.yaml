@@ -47,7 +47,7 @@ requirements:
     - {{posix}}make
     - {{posix}}coreutils         # [win]
     - {{posix}}zip               # [win]
-    - openjdk                    # [win]
+    - openjdk
 
   host:
     - r-base
@@ -58,7 +58,7 @@ requirements:
 
 test:
   requires:
-    - openjdk                    # [win or linux]
+    - openjdk
   commands:
     # You can put additional test commands to be run here.
     - $R -e "library('rJava')"           # [not win]
